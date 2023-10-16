@@ -1,0 +1,46 @@
+@use "../../styles/partials/reset" as *;
+@use "../../styles/partials//colors" as *;
+@use "../../styles/partials//typography" as *;
+@use "../../styles/partials//variables" as *;
+@use "../../styles/partials//mixins" as *;
+
+.videos {
+    padding: 0 1rem;
+    &__heading {
+        padding-bottom: 1rem;
+        color: $Silver;
+    }
+}
+.video{
+    &__item {
+        display: flex;
+        padding-bottom: 1rem;
+        height: 10rem;
+    }
+    &__image {
+        object-fit: cover;
+        height: 100%;
+        width: 35%;
+    }
+    &__details {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@include media-query-medium {
+    .videos {
+        width: 48%;
+        padding: 0 2rem;
+    }
+}
+
+@include media-query-large {
+    .videos {
+        width: 40%;
+        display: inline-flex;
+        flex-direction: column;
+    }
+}
